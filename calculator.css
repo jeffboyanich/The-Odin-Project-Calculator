@@ -1,0 +1,94 @@
+.display {
+    grid-area: display;
+}
+
+.zerobtn {
+    grid-area: z;
+}
+
+.ninebtn {
+    grid-area: nine;
+}
+
+.eightbtn {
+    grid-area: eight;
+}
+
+.sevenbtn {
+    grid-area: seven;
+}
+
+.sixbtn {
+    grid-area: six;
+}
+
+.fivebtn {
+    grid-area: five;
+}
+
+.fourbtn {
+    grid-area: four;
+}
+
+.threebtn {
+    grid-area: three;
+}
+
+.twobtn {
+    grid-area: two;
+}
+
+.onebtn {
+    grid-area: one;
+}
+
+.plus {
+    grid-area: plus;
+}
+
+.minus {
+    grid-area: minus;
+}
+
+.multiply {
+    grid-area: mult;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.equals {
+    grid-area: equal;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    grid-template-areas: 
+    "display display display display"
+    "nine    eight    seven    plus"
+    "six     five     four    minus"
+    "three   two      one      mult"
+    "z     clear     equal     divide";
+    width: 35vw;
+    text-align: center;
+    margin: auto;
+}
+
+.container {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.container > div {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-top: 40px;
+}
+
