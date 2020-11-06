@@ -45,9 +45,9 @@ function operate(operator, num1, num2) {
          return add(num1, num2);
     } else if (operator == '-') {
          return  subtract(num1, num2);
-    } else if (operator == '*') {
+    } else if (operator == 'x') {
         return multiply(num1, num2);
-    } else if (operator == '/') {
+    } else if (operator == '÷') {
         return  divide(num1, num2);
     };
 };
@@ -83,6 +83,7 @@ function clear() {
     operator = null;
     equalsIndicator = false;
 };
+
 
 digitOne.addEventListener('click', function() {
     assignFirstAndSecond(digitOne);
@@ -138,8 +139,8 @@ addBtn.addEventListener('click', function(){
     if (num2 !== '') {
         evaluateExpression();
     };
-    display.textContent += '+';
-    operator = '+';
+    display.textContent += ' ' + `${this.textContent}` + ' ';
+    operator = `${this.textContent}`;
     equalsIndicator = false;
 });
 
@@ -147,7 +148,7 @@ subtractBtn.addEventListener('click', function(){
     if (num2 !== '') {
         evaluateExpression();
     };
-    display.textContent += '-';
+    display.textContent +=  `${this.textContent}`;
     operator = '-';
     equalsIndicator = false;
 });
@@ -156,8 +157,8 @@ multiplyBtn.addEventListener('click', function(){
     if (num2 !== '') {
         evaluateExpression();
     };
-    display.textContent += 'x';
-    operator = '*';
+    display.textContent +=  `${this.textContent}`;
+    operator = `${this.textContent}`;
     equalsIndicator = false;
 });
 
@@ -165,14 +166,18 @@ divideBtn.addEventListener('click', function(){
     if (num2 !== '') {
         evaluateExpression();
     };
-    display.textContent += '/';
-    operator = '/';
+    display.textContent +=  `${this.textContent}`;
+    operator = `${this.textContent}`;
     equalsIndicator = false;
 });
 
 equalBtn.addEventListener('click', function(){
-    evaluateExpression();
-    equalsIndicator = true;
+    if (num2 == '') {
+        return;
+    } else {
+        evaluateExpression();
+        equalsIndicator = true;
+    }
 });
 
 clearBtn.addEventListener('click', function() {

@@ -72,9 +72,9 @@
     grid-template-rows: repeat(5, 100px);
     grid-template-areas: 
     "display display display display"
-    "nine    eight    seven    plus"
-    "six     five     four    minus"
-    "three   two      one      mult"
+    "seven    eight    nine    plus"
+    "four     five     six    minus"
+    "one   two      three      mult"
     "z     clear     equal     divide";
     width: 35vw;
     text-align: center;
@@ -90,5 +90,23 @@
     border: 2px solid black;
     border-radius: 5px;
     padding-top: 40px;
+}
+
+.operator {
+    background-color: #ff944d;
+}
+
+.equals {
+    background-color: #5cd65c;
+}
+
+.numbers {
+    background-color: #b3b3b3;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
+}
+
+.numbers, .operator, .equals {
+    color: white;
 }
 
