@@ -4,6 +4,8 @@
     font-size: 36px;
     text-align: end;
     padding-right: 10px;
+    background-color: #8c8c8c;
+    color: white;
 }
 
 .zerobtn {
@@ -84,18 +86,22 @@
     width: 35vw;
     text-align: center;
     margin: auto;
+    grid-gap: 10px;
+    background-color: #4d4d4d;
 }
 
 .container {
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 0px;
+    padding: 20px 20px 20px 20px;
 }
 
 .container > div {
     border: 2px solid black;
     border-radius: 5px;
-    padding-top: 40px;
+    padding-top: 28px;
+    
 }
 
 .operator {
@@ -104,16 +110,20 @@
 
 .equals {
     background-color: #5cd65c;
-}
-
-.numbers {
-    background-color: #b3b3b3;
     font-family: 'Work Sans', sans-serif;
     font-size: 40px;
 }
 
-.numbers, .operator, .equals {
+.numbers, .point, .plusminus, .clear, .backspace {
+    background-color: #b3b3b3;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
+
+}
+
+.numbers, .operator, .equals, .point, .plusminus, .clear, .backspace {
     color: white;
+    font-style: normal;
 }
 
 .numbers:active {
@@ -150,12 +160,12 @@
 .history {
     width: 20vw;
     border: 1px solid black;
-    padding: 10px;
+    padding: 0px;
     border-radius: 5px;
     text-align: center;
     font-family: 'Work Sans', sans-serif;
     font-size: 24px;
-    font-weight: 100;
+    background-color: #cccccc;
 }
 
 .backspace {
@@ -168,4 +178,8 @@
 
 .results {
     text-align: end;
+}
+
+.results > div {
+    border-bottom: 1px solid grey;
 }

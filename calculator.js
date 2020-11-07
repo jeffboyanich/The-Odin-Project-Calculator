@@ -12,47 +12,32 @@ function multiply(num1, num2) {
 };
 
 function divide(num1, num2) {
-    return num1 / num2;
+    if (num2 == 0) {
+        return "Error"
+    }else {
+        return num1 / num2;
+    }
 };
 
 
 //Initialize calculator button variables
-/*const digitOne = document.querySelector('.onebtn');
-const digitTwo = document.querySelector('.twobtn');
-const digitThree = document.querySelector('.threebtn');
-const digitFour = document.querySelector('.fourbtn');
-const digitFive = document.querySelector('.fivebtn');
-const digitSix = document.querySelector('.sixbtn');
-const digitSeven = document.querySelector('.sevenbtn');
-const digitEight = document.querySelector('.eightbtn');
-const digitNine = document.querySelector('.ninebtn');
-const digitZero = document.querySelector('.zerobtn');*/
-const addBtn = document.querySelector('.plus');
-const subtractBtn = document.querySelector('.minus');
-const multiplyBtn = document.querySelector('.multiply');
-const divideBtn = document.querySelector('.divide');
 const equalBtn = document.querySelector('.equals');
 const clearBtn = document.querySelector('.clear');
 const display = document.querySelector('.display');
-const point = document.querySelector('.point');
 const history = document.querySelector('.history');
 const results = document.querySelector('.results');
 const backSpaceBtn = document.querySelector('.backspace');
 
-/*const container = document.querySelector('.container');
-
-container.addEventListener('click', digitButtonFunc, false);
-
-function digitButtonFunc(e) {
-    if (e.target !== e.currentTarget) {
-        assignFirstAndSecond(e.target);
-    }
-    e.stopPropagation();
-}; */
-
 document.querySelectorAll('.numbers').forEach(item => {
     item.addEventListener('click', function(e) {
         assignFirstAndSecond(e.target);
+    });
+});
+
+document.querySelectorAll('.operator').forEach(item => {
+    item.addEventListener('click', function(e) {
+        evaluateExpression();
+        operatorFunction(e.target);
     });
 });
 
@@ -140,77 +125,9 @@ function backSpace() {
     console.log(num2);
 };
 
-/*digitOne.addEventListener('click', function() {
-    assignFirstAndSecond(this);
-});
-
-digitTwo.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-digitThree.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-digitFour.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-digitFive.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-digitSix.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-digitSeven.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-digitEight.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-digitNine.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-digitZero.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-});
-
-point.addEventListener('click', function(){
-    assignFirstAndSecond(this);
-}); */
-
-addBtn.addEventListener('click', function(){
-    evaluateExpression();
-    operatorFunction(this);
-    console.log(num1);
-    console.log(num2);
-});
-
-subtractBtn.addEventListener('click', function(){
-    evaluateExpression();
-    operatorFunction(this);
-});
-
-multiplyBtn.addEventListener('click', function(){
-    evaluateExpression();
-    operatorFunction(this);
-});
-
-divideBtn.addEventListener('click', function(){
-    evaluateExpression();
-    operatorFunction(this);
-});
-
 equalBtn.addEventListener('click', function(){
     evaluateExpression();
     equalsIndicator = true;
-    console.log(num1);
-    console.log(num2);
 });
 
 clearBtn.addEventListener('click', function() {
@@ -220,3 +137,4 @@ clearBtn.addEventListener('click', function() {
 backSpaceBtn.addEventListener('click', function() {
     backSpace();
 });
+
