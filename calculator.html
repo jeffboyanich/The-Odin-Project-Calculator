@@ -6,9 +6,12 @@
         <link rel="stylesheet" href="calculator.css">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik&family=Work+Sans:wght@200&display=swap');
         </style> 
     </head>
     <body>
+        <div class = 'wrapper'>
         <div class = 'container'>
             <div class = 'display'></div>
             <div class = 'plus operator'>+</div>
@@ -27,6 +30,14 @@
             <div class = 'onebtn numbers'>1</div>
             <div class = 'clear numbers'> Clear </div>
             <div class = 'equals'> = </div>
+            <div class = 'point numbers'>.</div>
+            <div class = 'plusminus numbers'>+/-</div>
+            <div class = 'backspace numbers'>⌫</div>
+        </div>
+        <div class = 'history'>
+            <h3> History </h3>
+            <div class = 'results'></div>       
+        </div>
         </div>
         <script src="calculator.js"></script>
     </body>

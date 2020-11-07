@@ -1,5 +1,9 @@
 .display {
     grid-area: display;
+    font-family: 'Rubik', sans-serif;
+    font-size: 36px;
+    text-align: end;
+    padding-right: 10px;
 }
 
 .zerobtn {
@@ -69,13 +73,14 @@
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 100px);
+    grid-template-rows: repeat(6, 100px);
     grid-template-areas: 
     "display display display display"
+    "clear   plusminus  bs   ...."
     "seven    eight    nine    plus"
     "four     five     six    minus"
     "one   two      three      mult"
-    "z     clear     equal     divide";
+    "z     point     equal     divide";
     width: 35vw;
     text-align: center;
     margin: auto;
@@ -84,6 +89,7 @@
 .container {
     border: 2px solid black;
     border-radius: 5px;
+    margin: 0px;
 }
 
 .container > div {
@@ -110,3 +116,56 @@
     color: white;
 }
 
+.numbers:active {
+    background-color: #8c8c8c;
+}
+
+.operator:active {
+    background-color: #ff8000;
+}
+
+.equals:active {
+    background-color: #009000;
+}
+
+.operator, .equals {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
+}
+
+.point {
+    grid-area: point;
+}
+
+.plusminus {
+    grid-area: plusminus;
+}
+
+.wrapper {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.history {
+    width: 20vw;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.backspace {
+    grid-area: bs;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.results {
+    text-align: end;
+}
